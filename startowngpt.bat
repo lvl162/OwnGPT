@@ -1,0 +1,1 @@
+streamlit run owngpt.py --server.address localhost
