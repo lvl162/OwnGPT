@@ -8,7 +8,7 @@ Ask questions to your documents without an internet connection, using the power 
 
 Built with LLM:[ggml-gpt4all-j-v1.3-groovy.bin](https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin).
 
-download [https://huggingface.co/TheBloke/zephyr-7B-beta-GGUF/resolve/main/zephyr-7b-beta.Q4_0.gguf](zephyr-7b-beta.Q4_0.gguf) and place in the Models folder.
+download (zephyr-7b-beta.Q4_0.gguf)(https://huggingface.co/TheBloke/zephyr-7B-beta-GGUF/resolve/main/zephyr-7b-beta.Q4_0.gguf) and place in the Models folder.
 
 # Environment Setup
 In order to set your environment up to run the code here, first install all requirements:
@@ -56,8 +56,10 @@ To run the Streamlit app, use the following command:
 ```
 streamlit run owngpt.py --server.address localhost
 ```
-On MS windows you can run the batch file startowngpt.bat
+
 This command launches the Streamlit app and connects it to the backend server running at `localhost`.
+
+On MS windows you can run the batch file startowngpt.bat
 
 And wait for "http://localhost:8501/" web App running on local system.
 
