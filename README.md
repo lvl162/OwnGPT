@@ -6,9 +6,9 @@ This project was inspired by the original privateGPT (https://github.com/imartin
 
 Ask questions to your documents without an internet connection, using the power of LLMs. 100% private, no data leaves your execution environment at any point. You can ingest documents and ask questions without an internet connection!
 
-Built with LLM:[ggml-gpt4all-j-v1.3-groovy.bin](https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin).
+Uses either [zephyr-7b-beta.Q4_0.gguf](https://huggingface.co/TheBloke/zephyr-7B-beta-GGUF/resolve/main/zephyr-7b-beta.Q4_0.gguf) or [ggml-gpt4all-j-v1.3-groovy.bin](https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin).  
 
-download [zephyr-7b-beta.Q4_0.gguf](https://huggingface.co/TheBloke/zephyr-7B-beta-GGUF/resolve/main/zephyr-7b-beta.Q4_0.gguf) and place in the Models folder.
+One of these should be downloaded and placed in the Models folder. Note default configuration is for zephyr-7b-beta.Q4_0.gguf, see owngptsettings.py.
 
 # Environment Setup
 In order to set your environment up to run the code here, first install all requirements:
