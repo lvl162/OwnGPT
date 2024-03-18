@@ -10,6 +10,7 @@ Uses either [zephyr-7b-beta.Q4_0.gguf](https://huggingface.co/TheBloke/zephyr-7B
 
 One of these should be downloaded and placed in the Models folder. Note default configuration is for zephyr-7b-beta.Q4_0.gguf, see owngptsettings.py.
 
+
 # Environment Setup
 In order to set your environment up to run the code here, first install all requirements:
 
@@ -49,11 +50,22 @@ If you want to start from an empty database, delete the `index`.
 
 Note: When you run this for the first time, it will download take time as it has to download the embedding model. In the subseqeunt runs, no data will leave your local enviroment and can be run without internet connection.
 
-## Ask questions to your documents, locally! using sreamlit UI
-In order to ask a question, run a command like:
+## To Ask questions on your documents locally.
 
-To run the Streamlit app, use the following command:
+You ask questions in two ways, either command line or using the Streamlit interface.
+
+To use the command line type the following:
+
+```shell
+python privategpt.py "Your Question"
 ```
+
+Note this runs in verbose mode so is more for checking installation and or debugging.
+
+Alternatively to run the Streamlit app, use the following command:
+
+
+```shell
 streamlit run owngpt.py --server.address localhost
 ```
 
@@ -73,7 +85,7 @@ Enter your Query in TextBox and Hit enter. Wait while the LLM model consumes the
 Selecting the right local models and the power of `LangChain` you can run the entire pipeline locally, without any data leaving your environment, and with reasonable performance.
 
 - `ingest.py` uses `LangChain` tools to parse the document and create embeddings locally using `InstructorEmbeddings`. It then stores the result in a local vector database using `Chroma` vector store. 
-- `streamlit run owngpt.py` uses a local LLM (ggml-gpt4all-j-v1.3-groovy.bin) to understand questions and create answers. The context for the answers is extracted from the local vector store using a similarity search to locate the right piece of context from the docs.
+- `streamlit run owngpt.py` uses a local LLM (such as ggml-gpt4all-j-v1.3-groovy.bin) to understand questions and create answers. The context for the answers is extracted from the local vector store using a similarity search to locate the right piece of context from the docs.
 - You can replace this local LLM with any other LLM from the HuggingFace. Make sure whatever LLM you select is in the HF format.
 
 # System Requirements
