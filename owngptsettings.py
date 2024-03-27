@@ -8,7 +8,13 @@ source_directory = ".\\source_documents"
 embeddings_model_name = "sentence-transformers/all-mpnet-base-v2"
 collection_name = "collection_name"
 model_path = ".\\Models\\zephyr-7b-beta.Q4_0.gguf"
-#model_path = (".\\Models\\ggml-gpt4all-j-v1.3-groovy.bin")
 model_n_ctx = 5000
 model_type = "LlamaCpp"
 #model_type = "GPT4All"
+
+# Data processing chunk size and overlap
+# a larger resolution of 512 or 1024 is possible
+# with an overlap around 50
+# see https://www.pinecone.io/learn/chunking-strategies/
+chunk_size = 256 
+chunk_overlap = 20

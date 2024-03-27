@@ -68,8 +68,8 @@ def main():
 
     # Load documents and split in chunks
     print(f"Loading documents from {owngptsettings.source_directory}")
-    chunk_size = 500
-    chunk_overlap = 50
+    chunk_size = owngptsettings.chunk_size
+    chunk_overlap = owngptsettings.chunk_overlap
     documents = load_documents(owngptsettings.source_directory)
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     texts = text_splitter.split_documents(documents)
